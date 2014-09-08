@@ -1,4 +1,0 @@
-14Wechsel
-=========
-
-Wechselstromwiderstände
