@@ -371,3 +371,47 @@ correlation matrix of the fit parameters:
 L               1.000 
 C              -1.000  1.000 
 R               1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Tue Sep 30 11:58:18 2014
+
+
+FIT:    data read from 'messung2.dat' u (2*pi*$1/1000):($6/180*pi):(pi/90)
+        format = x:z:s
+        #datapoints = 16
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 778.396           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 122.078
+
+initial set of free parameter values
+
+L               = 0.35
+C               = 1.8
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 209.842
+rel. change during last iteration : -7.93246e-08
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.87152
+variance of residuals (reduced chisquare) = WSSR/ndf   : 14.9887
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+L               = 0.374363         +/- 0.04831      (12.9%)
+C               = 1.85711          +/- 0.2399       (12.92%)
+
+
+correlation matrix of the fit parameters:
+
+               L      C      
+L               1.000 
+C              -0.993  1.000 
