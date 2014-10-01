@@ -2,7 +2,7 @@ reset
 set terminal epslatex color
 set output 'messung2.tex'
 set xlabel 'Kreisfrequenz [kHz]'
-set ylabel 'Impedanz [$\Omega$]'
+set ylabel 'Impedanz [k$\Omega$]'
 set key top right
 
 f(x)=sqrt(R**2+(x*L-1/(x*C))**2)

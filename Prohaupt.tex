@@ -171,6 +171,7 @@ Praktikant: &  Michael Lohmann\\
 
 \section{Auswertung}
 \label{sec:auswertung}
+\subsection{Widerstand und Spule in Reihe}
 \begin{figure}[!htb]
 	\centering
 	\input{messung1.tex}
@@ -178,12 +179,23 @@ Praktikant: &  Michael Lohmann\\
 	\label{fig:messung1}
 \end{figure}
 
+\begin{align}
+	L&=(386\pm 0.6)\,\si{\milli\henry}\\
+	R_\text{ges}&=(77.3 \pm 1.1)\,\si{\ohm}
+\end{align}
+\subsection{RLC-Serienschaltung}
 \begin{figure}[!htb]
 	\centering
 	\input{messung2.tex}
 	\caption{Impedanz des Serienresonanzkreis als Funktion der Kreisfrequenz}
 	\label{fig:messung2}
 \end{figure}
+
+\begin{align}
+	R &= (80.9 \pm 0.5)\,\si{\ohm}\\
+	L &= (386.053 \pm 1.0)\,\si{\milli\henry}\\
+	C &= (1.799 \pm 0.005)\,\si{\micro\farad}
+\end{align}
 
 \begin{figure}[!htb]
 	\centering
@@ -198,7 +210,7 @@ Praktikant: &  Michael Lohmann\\
 	\caption{Teilspannungen des Serienresonanzkreises}
 	\label{fig:teilU}
 \end{figure}
-
+\subsection{Parallelkreis}
 \begin{figure}[!htb]
 	\centering
 	\input{messung3.tex}

@@ -5,16 +5,21 @@ set xlabel '$\omega$ [kHz]'
 set ylabel '$\varphi$ [Grad]'
 set key top left
 
+set yrange [-2:2]
+
 f(x)=atan((x*L-1/(x*C))/R)
 R=0.078
 C=1.8
 L=0.35
 
+g(x)=m*x+b
 
 set fit logfile 'phase.log'
 fit f(x) 'messung2.dat' u (2*pi*$1/1000):($6/180*pi):(pi/90) via L,C
+fit [2*pi/1000*160:2*pi/1000*220] g(x) 'messung2.dat' u (2*pi*$1/1000):($6/180*pi):(pi/90) via m,b
 
-p 'messung2.dat' u (2*pi*$1/1000):($6/180*pi):(pi/90) w e t'Messwerte', f(x)
+
+p 'messung2.dat' u (2*pi*$1/1000):($6/180*pi):(pi/90) w e t'Messwerte', f(x), g(x)
 
 set output
 !epstopdf phase.eps
