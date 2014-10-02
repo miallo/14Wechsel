@@ -184,24 +184,27 @@ Praktikant: &  Michael Lohmann\\
 	R_\text{ges}&=(77.3 \pm 1.1)\,\si{\ohm}
 \end{align}
 \subsection{RLC-Serienschaltung}
-\begin{align}
-\omega=\frac{1}{\sqrt{LC}}
-\end{align}
 \begin{figure}[!htb]
 	\centering
 	\input{messung2.tex}
 	\caption{Impedanz des Serienresonanzkreis als Funktion der Kreisfrequenz}
 	\label{fig:messung2}
 \end{figure}
-
+Aus
 \begin{align}
 	R &= (80.9 \pm 0.5)\,\si{\ohm}\\
 	L &= (386.1 \pm 1.0)\,\si{\milli\henry}\\
 	C &= (1.799 \pm 0.005)\,\si{\micro\farad}
 \end{align}
+Mittelwerte aus allen Daten:
 \begin{align}
 \overline L&=(386.2 \pm 0.6)\si{\milli\henry}\\
 \overline R&=(80.2836 \pm 0.455183)\,\si{\ohm}
+\end{align}
+\begin{align}
+\omega&=\frac{1}{\sqrt{LC}}\\
+\sigma_{\omega}&=\frac{\sqrt{\frac{\sigma_{L}^{2}}{L^{2}} + \frac{\sigma_{C}^{2}}{C^{2}}}}{2 \cdot \sqrt{C} \cdot \sqrt{L}}\\
+\omega&=(1199.9 \pm 2.3)\,\si{\hertz}
 \end{align}
 \begin{figure}[!htb]
 	\centering
@@ -210,6 +213,12 @@ Praktikant: &  Michael Lohmann\\
 	\label{fig:phase}
 \end{figure}
 
+Aus Fit von Messung 2:
+\begin{align}
+R &= (68\pm 5)\si{\kilo\ohm}\\
+L &= (370 \pm 10)\si{\milli\henry}\\
+C &= (1.88  \pm 0.05) \si{\micro\farad}
+\end{align}
 \begin{figure}[!htb]
 	\centering
 	\input{spannungen.tex}
