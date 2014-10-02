@@ -1,8 +1,8 @@
 reset
 set terminal epslatex color
 set output 'messung2.tex'
-set xlabel '$\omega^2$ [kHz]'
-set ylabel '$Z^2$ [k$\Omega$]'
+set xlabel '$\omega$ [kHz]'
+set ylabel '$Z$ [k$\Omega$]'
 set key top right
 
 f(x)=sqrt(R**2+(x*L-1/(x*C))**2)

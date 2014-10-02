@@ -162,7 +162,7 @@ Praktikant: &  Michael Lohmann\\
 
 \section{Einleitung}
 \label{sec:einleitung}
-\cite{LP}
+\cite{LP14}
 \section{Theorie}
 \label{sec:theorie}
                                                                                                                                                                       
@@ -202,9 +202,9 @@ Mittelwerte aus allen Daten:
 \overline R&=(80.2836 \pm 0.455183)\,\si{\ohm}
 \end{align}
 \begin{align}
-\omega&=\frac{1}{\sqrt{LC}}\\
-\sigma_{\omega}&=\frac{\sqrt{\frac{\sigma_{L}^{2}}{L^{2}} + \frac{\sigma_{C}^{2}}{C^{2}}}}{2 \cdot \sqrt{C} \cdot \sqrt{L}}\\
-\omega&=(1199.9 \pm 2.3)\,\si{\hertz}
+\omega_\text{LC}&=\frac{1}{\sqrt{LC}}\\
+\sigma_{\omega_\text{LC}}&=\frac{\sqrt{\frac{\sigma_{L}^{2}}{L^{2}} + \frac{\sigma_{C}^{2}}{C^{2}}}}{2 \cdot \sqrt{C} \cdot \sqrt{L}}\\
+\omega_\text{LC}&=(1199.9 \pm 2.3)\,\si{\hertz}
 \end{align}
 \begin{figure}[!htb]
 	\centering
@@ -213,11 +213,10 @@ Mittelwerte aus allen Daten:
 	\label{fig:phase}
 \end{figure}
 
-Aus Fit von Messung 2:
 \begin{align}
-R &= (68\pm 5)\si{\kilo\ohm}\\
-L &= (370 \pm 10)\si{\milli\henry}\\
-C &= (1.88  \pm 0.05) \si{\micro\farad}
+\omega_\text{Phase}&=- \frac{b}{m}\\
+\sigma_{\omega_\text{Phase}}&=\frac{1}{m^{2}} \cdot \sqrt{b^{2} \cdot \sigma_{m}^{2} + m^{2} \cdot \sigma_{b}^{2}}\\
+\omega_\text{Phase}&=(1200 \pm 120)\,\si\hertz
 \end{align}
 \begin{figure}[!htb]
 	\centering
@@ -226,6 +225,12 @@ C &= (1.88  \pm 0.05) \si{\micro\farad}
 	\label{fig:teilU}
 \end{figure}
 \subsection{Parallelkreis}
+Aus Fit von Messung 3:
+\begin{align}
+R &= (68\pm 5)\si{\kilo\ohm}\\
+L &= (370 \pm 10)\si{\milli\henry}\\
+C &= (1.88  \pm 0.05) \si{\micro\farad}
+\end{align}
 \begin{figure}[!htb]
 	\centering
 	\input{messung3.tex}
