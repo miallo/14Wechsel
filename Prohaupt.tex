@@ -163,10 +163,47 @@ Eingegangen am:
 \label{sec:einleitung}
 Wechselströme spielen in der modernen Energieversorgung eine zentrale Rolle.
 Um so wichtiger ist es für die Effizienz, die genauen Eigenschaften von \emph{Wechselstrom-Widerständen} zu kennen.
-Dies soll in diesem Versuch erziehlt werden.\cite{LP14}
+Dies soll in diesem Versuch erziehlt werden.
 \section{Theorie}
 \label{sec:theorie}
-                                                                                                                                                                      
+\subsection{Wechselspannungen und -ströme}
+Unter einer Wechselspannung versteht man eine Spannung, die einen zeitlichen Verlauf von $U(t)= U_0\cdot\sin(\omega t)$ besitzt.
+Da hierbei die maximale Spannung $U_0$ nur den kürzesten Teil der Zeit anliegt, ist die Definition eines \emph{Effektivwertes} sinnvoll.
+Diese ist so definiert, dass eine Gleichspannung diesen Wertes die selbe Leistung erbringt, nämlich für $\sin$-förmige Spannungen:
+\begin{align*}
+U_\text{eff}=\frac{U_0}{\sqrt2}\quad .
+\end{align*}
+Die in europäischen Haushalten übliche Wechselspannung von $U_\text{eff}=220\,\si\volt$ besitzt so eine Maximalspannung von $U_0=\sqrt2\cdot U_\text{eff}=311\,\si\volt$.\\
+
+Der fließende Strom $I$ besitzt nun die Form
+\begin{align*}
+I=I_0\cdot\sin(\omega t+\varphi)
+\end{align*}
+wobei $\varphi$ die Phasenverschiebung ist.
+Diese hängt ab von der jeweiligen Schaltung ab und wird in den Kapiteln \ref{sec:RLC} und \ref{sec:LC} behandelt.
+
+\subsection{Induktivität}
+Nach \cite[S. 313]{griffith} gilt für eine Spule
+\begin{align}
+U_\text{Ind}=-U_L=-L\frac{dI}{dt}\qquad .
+\end{align}
+Hierbei bezeichnet $L$ die Induktivität, welche von der Spulengeometrie abhängt.
+Nimmt man nun wieder die $\sin$-Spannung an, so folgt:
+\begin{align*}
+U_0\cdot\sin(\omega t)&=L\frac{dI}{dt}\\
+\Leftrightarrow I(t)&=U_0\frac{1}{\omega L}\cos(\omega t)\qquad .
+\end{align*}
+Dies bedeutet, dass die Phasenverschiebung für eine Schaltung, welche nur aus einer Spule bestehent, $\varphi=\frac{\pi}{2}$ beträgt.
+
+
+\subsection{Kapazität}
+
+\subsection{$RLC$-Serienschaltung}
+\label{sec:RLC}
+
+\subsection{$LC$-Parallelschaltung}
+\label{sec:LC}
+
 \section{Durchführung}
 \label{sec:durchfuehrung}
 Der Aufbau besteht aus einem Frequenzgenerator, welcher einem veränderlichen Stromkreis aus Widerstand, Kondensator und Luftspule Spannung bereitstellt.
@@ -195,7 +232,7 @@ Dies sind:
 \end{itemize}
 
 Während der Messungen ist darauf zu achten, dass die hier verwendeten Spannungen \emph{tödlich} sein können und dass deshalb auf keinen Fall blanke Kabelenden herumliegen dürfen.
-Auch muss vor jeden Änderungen am Aufbeu sichergestellt werden, dass die Spannung abgeschaltet ist.
+Auch muss vor jeden Änderungen am Aufbau sichergestellt werden, dass die Spannung abgeschaltet ist.
 
 
 \section{Auswertung}
@@ -212,7 +249,7 @@ Auch muss vor jeden Änderungen am Aufbeu sichergestellt werden, dass die Spannu
 	L&=(386.3\pm 0.6)\,\si{\milli\henry}\\
 	R_\text{ges}&=(77.3 \pm 1.1)\,\si{\ohm}
 \end{align}
-\subsection{RLC-Serienschaltung}
+\subsection{$RLC$-Serienschaltung}
 \begin{figure}[!htb]
 	\centering
 	\input{messung2.tex}
