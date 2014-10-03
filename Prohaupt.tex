@@ -136,7 +136,7 @@
 \begin{Large}
 \begin{tabular}{ll}
 Praktikant: &  Michael Lohmann\\
- Mitpraktikant &  Felix Kurtz\\
+ Versuchspartner &  Felix Kurtz\\
  E-Mail: & m.lohmann@stud.uni-goettingen.de\\
  Betreuer: & Björn Klaas\\
  Versuchsdatum: & 08.09.2014\\
@@ -169,6 +169,33 @@ Dies soll in diesem Versuch erziehlt werden.\cite{LP14}
                                                                                                                                                                       
 \section{Durchführung}
 \label{sec:durchfuehrung}
+Der Aufbau besteht aus einem Frequenzgenerator, welcher einem veränderlichen Stromkreis aus Widerstand, Kondensator und Luftspule Spannung bereitstellt.
+Die verschiedenen Parameter Ausgangsspannung $U$, Spannung an Widerstand und Spule $U_{L+R}$, Spannung am Kondensator $U_C$ und Gesamtstrom $I$ werden mit einem Oszilloskop bzw. Spannungs- und Strom-Messgeräten vermessen.\\
+
+Zunächst baut man einen Serienschaltkreis aus allen Bauteilen auf.
+Das Oszilloskop wird zur Bestimmung der Phasenverschiebung einerseits zur Vermessung der Ausgangsspannung $U$ und andererseits zum bestimmen des Stroms mit einer Messzange verwendet.
+Es kann nun die beiden Kurven mit Hilfe des Mathe-Modus direkt auf deren Phasenverschiebung hin auswerten.
+Damit dies zuverlässig geschieht, ist darauf zu achten, dass die jeweiligen $y$-Achsen so gewählt sind, dass die Kurven ungefähr die selben Ausschläge zeigen.
+Auch muss mehr als eine Periode angezeigt werden.
+
+Alle gemessenen Parameter sollen nun für möglichst viele verschiedene Frequenzen $f$ aufgezeichnet werden.
+Dabei ist der Resonanzbereich besonders genau zu untersuchen.\\
+
+Im zweiten Versuchsteil soll ein Parallelkreis aus Kondensator und Spule vermessen werden.
+In dieser Messung sollen die Spannung $U$ und der Gesamtstrom $I$ für verschiedene Frequenzen ausgewertet werden.
+Auch hier soll die Resonanzstelle wieder besonders genau untersucht werden.\\
+
+Für die Auswertung werden abschließend die Daten der einzelnen Bauteile aufgezeichnet.
+Dies sind:
+\begin{itemize}
+\item Einzelner ohmscher Widerstand $R_\Omega$
+\item Ohmscher Widerstand der Spule $R_L$
+\item Innenwiderstand des Amperemeters $R_A$
+\item Kapazität des Kondensators $C$.
+\end{itemize}
+
+Während der Messungen ist darauf zu achten, dass die hier verwendeten Spannungen \emph{tödlich} sein können und dass deshalb auf keinen Fall blanke Kabelenden herumliegen dürfen.
+Auch muss vor jeden Änderungen am Aufbeu sichergestellt werden, dass die Spannung abgeschaltet ist.
 
 
 \section{Auswertung}
@@ -177,7 +204,7 @@ Dies soll in diesem Versuch erziehlt werden.\cite{LP14}
 \begin{figure}[!htb]
 	\centering
 	\input{messung1.tex}
-	\caption{Quadrat der Impedanz als Funktion der Kreisfrequenz}
+	\caption{Quadrat der Impedanz als Funktion der Kreisfrequenz.}
 	\label{fig:messung1}
 \end{figure}
 
@@ -189,7 +216,7 @@ Dies soll in diesem Versuch erziehlt werden.\cite{LP14}
 \begin{figure}[!htb]
 	\centering
 	\input{messung2.tex}
-	\caption{Impedanz des Serienresonanzkreis als Funktion der Kreisfrequenz}
+	\caption{Impedanz des Serienresonanzkreis als Funktion der Kreisfrequenz.}
 	\label{fig:messung2}
 \end{figure}
 Aus
@@ -211,7 +238,7 @@ Mittelwerte aus allen Daten:
 \begin{figure}[!htb]
 	\centering
 	\input{phase.tex}
-	\caption{Phasenverschiebung des Serienresonanzkreises}
+	\caption{Phasenverschiebung des Serienresonanzkreises.}
 	\label{fig:phase}
 \end{figure}
 
@@ -223,7 +250,7 @@ Mittelwerte aus allen Daten:
 \begin{figure}[!htb]
 	\centering
 	\input{spannungen.tex}
-	\caption{Teilspannungen des Serienresonanzkreises}
+	\caption{Teilspannungen des Serienresonanzkreises.}
 	\label{fig:teilU}
 \end{figure}
 \subsection{Parallelkreis}
@@ -236,7 +263,7 @@ C &= (1.88  \pm 0.05) \si{\micro\farad}
 \begin{figure}[!htb]
 	\centering
 	\input{messung3.tex}
-	\caption{Impedanz des Parallelkreises als Funktion der Kreisfrequenz}
+	\caption{Impedanz des Parallelkreises als Funktion der Kreisfrequenz.}
 	\label{fig:messung3}
 \end{figure}
 
