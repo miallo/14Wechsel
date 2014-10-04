@@ -127,8 +127,9 @@
 
 \rule{\textwidth}{1pt}\\[0.5cm]
 {\huge \bfseries
-  Wechselstromwiderstände\\[1.5ex]
-  Protokoll}\\[0.5cm]
+Versuch 14\\[1.5ex]
+  Wechselstromwiderstände
+  }\\[0.5cm]
 \rule{\textwidth}{1pt}
 
 \vspace*{2.5cm}
@@ -182,6 +183,24 @@ I=I_0\cdot\sin(\omega t+\varphi)
 wobei $\varphi$ die Phasenverschiebung ist.
 Diese hängt ab von der jeweiligen Schaltung ab und wird in den Kapiteln \ref{sec:RLC} und \ref{sec:LC} behandelt.
 
+\subsection{Impedanz}
+\begin{figure}[!h]
+\centering
+\input{zeiger.pdf_tex}
+\caption{Zeigerdiagramm, welches die Realteile der Spannung gegen ihren Imaginärteil in einer Serienschaltung aufträgt.}
+\label{fig:zeiger}
+\end{figure}
+Die Impedanz $Z$ berechnet sich je nach Aufbau aus den einzelnen Spannungen und Ströme allgemein durch
+\begin{align}
+Z=\frac{U(t)}{I(t)}\quad .
+\end{align}
+Dies ist analog zum Ohmschen Widerstand $R=\frac{U}{I}$, wodurch sich der Name Scheinwiderstand $|Z|$ für ihren Betrag ergibt.
+
+In Abb. \ref{fig:zeiger} ist ein Beispiel aufgetragen, in dem man die verschiedenen Spannungen einer Serienschaltung erkennen kann, die an den einzelnen Bauteilen abfallen.
+Im Resonanzfall ist $U_L=U_C$, wodurch die gesammte Spannung $U_{L+C+R}$ real wird und die Phasenverschiebung $\varphi=0$ verschwindet.
+
+
+
 \subsection{Induktivität}
 Nach \cite[S. 313]{griffith} gilt für eine Spule
 \begin{align}
@@ -217,16 +236,10 @@ X_C:=\frac{U(t)}{I(t)}=-\frac{1}{\omega C}
 
 \subsection{$RLC$-Serienschaltung}
 \label{sec:RLC}
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.6\linewidth]{serie}
-\caption{Schaltplan der Serienschaltung von \cite[4.10.2014, 15:30]{LP14}.}
-\label{fig:serienschaltung}
-\end{figure}
 Ein $RLC$-Serienschaltkreis wie in Abb. \ref{fig:serienschaltung} muss nun aus einer Zusammensetzung der beiden erfolgen.
 Dafür definiert man die \emph{Impedanz}:
 \begin{align}
-Z:=\left|R+i(X_C+X_L)\right|=\left|R+i\left( \omega L-\frac{1}{\omega C} \right)\right|=\sqrt{R^2+(X_L+X_C)^2}\quad .
+Z_\text{Serie}:=\left|R+i(X_C+X_L)\right|=\left|R+i\left( \omega L-\frac{1}{\omega C} \right)\right|=\sqrt{R^2+(X_L+X_C)^2}\quad .
 \end{align}
 Die Phasenverschiebung lässt sich (wie in Abb. \ref{fig:zeiger} zu erkennen und nach \cite[S. 1042]{giancoli}) durch
 \begin{align}
@@ -236,26 +249,21 @@ berechnen.
 
 \subsection{$LC$-Parallelschaltung}
 \label{sec:LC}
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.6\linewidth]{parallel}
-\caption{Schaltplan der Parallelschaltung von \cite[4.10.2014, 15:30]{LP14}.}
-\label{fig:parallel}
-\end{figure}
-
-\subsection{Impedanz}
-\begin{figure}[!h]
-\centering
-\input{zeiger.pdf_tex}
-\caption{Zeigerdiagramm, welches die Realteile der Spannung gegen ihren Imaginärteil aufträgt.}
-\label{fig:zeiger}
-\end{figure}
-
+Ist ein $LC$-Parallelschaltkreis wie in Abb. \ref{fig:parallel} vorhanden, so berechnet sich die Impedanz nach der Spannungsregel für Parallelkreise durch
+\begin{align*}
+Z_\text{Para}=\frac{i}{\frac{1}{X_L}+\frac{1}{X_C}}
+\end{align*}
 \section{Durchführung}
 \label{sec:durchfuehrung}
 Der Aufbau besteht aus einem Frequenzgenerator, welcher einem veränderlichen Stromkreis aus Widerstand, Kondensator und Luftspule Spannung bereitstellt.
 Die verschiedenen Parameter Ausgangsspannung $U$, Spannung an Widerstand und Spule $U_{L+R}$, Spannung am Kondensator $U_C$ und Gesamtstrom $I$ werden mit einem Oszilloskop bzw. Spannungs- und Strom-Messgeräten vermessen.\\
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\linewidth]{serie}
+\caption{Schaltplan der Serienschaltung von \cite[4.10.2014, 15:30]{LP14}.}
+\label{fig:serienschaltung}
+\end{figure}
 Zunächst baut man einen Serienschaltkreis aus allen Bauteilen auf.
 Das Oszilloskop wird zur Bestimmung der Phasenverschiebung einerseits zur Vermessung der Ausgangsspannung $U$ und andererseits zum bestimmen des Stroms mit einer Messzange verwendet.
 Es kann nun die beiden Kurven mit Hilfe des Mathe-Modus direkt auf deren Phasenverschiebung hin auswerten.
@@ -265,6 +273,12 @@ Auch muss mehr als eine Periode angezeigt werden.
 Alle gemessenen Parameter sollen nun für möglichst viele verschiedene Frequenzen $f$ aufgezeichnet werden.
 Dabei ist der Resonanzbereich besonders genau zu untersuchen.\\
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\linewidth]{parallel}
+\caption{Schaltplan der Parallelschaltung von \cite[4.10.2014, 15:30]{LP14}.}
+\label{fig:parallel}
+\end{figure}
 Im zweiten Versuchsteil soll ein Parallelkreis aus Kondensator und Spule vermessen werden.
 In dieser Messung sollen die Spannung $U$ und der Gesamtstrom $I$ für verschiedene Frequenzen ausgewertet werden.
 Auch hier soll die Resonanzstelle wieder besonders genau untersucht werden.\\
@@ -288,7 +302,7 @@ Auch muss vor jeden Änderungen am Aufbau sichergestellt werden, dass die Spannu
 \begin{figure}[!htb]
 	\centering
 	\input{messung1.tex}
-	\caption{Quadrat der Impedanz als Funktion der Kreisfrequenz.}
+	\caption{Quadrat des Scheinwiderstands als Funktion der Kreisfrequenz.}
 	\label{fig:messung1}
 \end{figure}
 
@@ -300,7 +314,7 @@ Auch muss vor jeden Änderungen am Aufbau sichergestellt werden, dass die Spannu
 \begin{figure}[!htb]
 	\centering
 	\input{messung2.tex}
-	\caption{Impedanz des Serienresonanzkreis als Funktion der Kreisfrequenz.}
+	\caption{Scheinwiderstand des Serienresonanzkreis als Funktion der Kreisfrequenz.}
 	\label{fig:messung2}
 \end{figure}
 Aus
@@ -347,7 +361,7 @@ C &= (1.88  \pm 0.05) \si{\micro\farad}
 \begin{figure}[!htb]
 	\centering
 	\input{messung3.tex}
-	\caption{Impedanz des Parallelkreises als Funktion der Kreisfrequenz.}
+	\caption{Scheinwiderstand des Parallelkreises als Funktion der Kreisfrequenz.}
 	\label{fig:messung3}
 \end{figure}
 
