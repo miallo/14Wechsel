@@ -188,26 +188,51 @@ Nach \cite[S. 313]{griffith} gilt für eine Spule
 U_\text{Ind}=-U_L=-L\frac{dI}{dt}\qquad .
 \end{align}
 Hierbei bezeichnet $L$ die Induktivität, welche von der Spulengeometrie abhängt.
-Nimmt man nun wieder die $\sin$-Spannung an, so folgt:
+Nimmt man nun wieder die Sinus-Spannung an, so folgt:
 \begin{align*}
 U_0\cdot\sin(\omega t)&=L\frac{dI}{dt}\\
 \Leftrightarrow I(t)&=U_0\frac{1}{\omega L}\cos(\omega t)\qquad .
 \end{align*}
-Dies bedeutet, dass die Phasenverschiebung für eine Schaltung, welche nur aus einer Spule bestehent, $\varphi=\frac{\pi}{2}$ beträgt.
+Dies bedeutet, dass die Spannung dem Strom für eine Schaltung, welche nur aus einer Spule bestehent, um $\varphi=\frac{\pi}{2}$ voraus eilt.
 
 Man kann nun den \emph{Blindwiderstand} für eine Spule definieren:
 \begin{align}
-X_L=\frac{U(t)}{I(t)}=iL\omega
+X_L:=\frac{U(t)}{I(t)}=L\omega\quad .
 \end{align}
 
 
 
 \subsection{Kapazität}
-Ein Kondensator hat analog zu einer Spule 
+Für einen Kondensator gilt nach \cite[S. 822]{giancoli}:
+\begin{align*}
+Q&=CU=CU_0\sin(\omega t)\\
+\Rightarrow I(t)&=\dot Q=CU_0\omega\cos(\omega t)\quad .
+\end{align*}
+Dies bedeutet, dass der Strom der Spannung um $\varphi=\frac{\pi}{2}$ voraus eilt.
 
+Auch für einen Kondensator kann man so einen \emph{Blindwiederstand} definieren:
+\begin{align}
+X_C:=\frac{U(t)}{I(t)}=-\frac{1}{\omega C}
+\end{align}
 
 \subsection{$RLC$-Serienschaltung}
 \label{sec:RLC}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.7\linewidth]{serie}
+\caption{Schaltplan der Serienschaltung}
+\label{fig:serienschaltung}
+\end{figure}
+Ein $RLC$-Serienschaltkreis wie in Abb. \ref{fig:serienschaltung} muss nun aus einer Zusammensetzung der beiden erfolgen.
+Dafür definiert man die \emph{Impedanz}:
+\begin{align}
+Z:=\left|R+i(X_C+X_L)\right|=\left|R+i\left( \omega L-\frac{1}{\omega C} \right)\right|=\sqrt{R^2+(X_L+X_C)^2}\quad .
+\end{align}
+Die Phasenverschiebung lässt sich (wie in Abb. \ref{fig:zeiger} zu erkennen und nach \cite[S. 1042]{giancoli}) durch
+\begin{align}
+\varphi=\arctan\left( \frac{X_L+X_C}{R} \right)
+\end{align}
+berechnen.
 
 \subsection{$LC$-Parallelschaltung}
 \label{sec:LC}
