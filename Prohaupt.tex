@@ -169,7 +169,10 @@ Auch die Phasenverschiebung von Strom zu Spannung soll in diesem Versuch beobach
 \label{sec:theorie}
 \subsection{Wechselspannungen und -ströme}
 Unter einer Wechselspannung versteht man eine Spannung, die einen periodischen zeitlichen Verlauf besitzt.
-Die zumeist verwendete ist die sinusförmige mit $U(t)=U_0\cdot\sin(\omega t)$.
+Die zumeist verwendete ist die sinusförmige mit 
+\begin{align*}
+U(t)=U_0\cdot\sin(\omega t)\quad .
+\end{align*}
 Da hierbei die maximale Spannung $U_0$ nur den kürzesten Teil der Zeit anliegt, ist die Definition eines \emph{Effektivwertes} sinnvoll.
 Diese ist so definiert, dass eine Gleichspannung diesen Wertes die selbe Leistung erbringt, nämlich:
 \begin{align*}
@@ -204,7 +207,7 @@ Im Resonanzfall ist $X_L=X_C$, wodurch die gesammte Impedanz $Z$ real wird und d
 
 Die Phasenverschiebung ist nach \cite[S. 236]{nolting3} definiert als
 \begin{align}
-\varphi=\arctan\frac{\Im(Z)}{\Re(Z)}
+\varphi=\arctan\frac{\Im(Z)}{\Re(Z)}\quad .
 \end{align}
 
 \subsection{Ohmscher Widerstand}
@@ -216,13 +219,13 @@ Strom und Spannung sind also in Phase.
 \subsection{Induktivität}
 Nach \cite[S. 313]{griffith} gilt für eine Spule
 \begin{align}
-U_\text{Ind}=-U_L=-L\frac{dI}{dt}\qquad .
+U_\text{Ind}=-U_L=-L\frac{dI}{dt}\quad .
 \end{align}
 Hierbei bezeichnet $L$ die Induktivität, welche von der Spulengeometrie abhängt.
 Nimmt man nun wieder die Sinus-Spannung an, so folgt:
 \begin{align*}
 U_0\cdot\sin(\omega t)&=L\frac{dI}{dt}\\
-\Leftrightarrow I(t)&=U_0\frac{1}{\omega L}\cos(\omega t)\qquad .
+\Rightarrow I(t)&=U_0\frac{1}{\omega L}\cos(\omega t)\quad .
 \end{align*}
 Dies bedeutet, dass die Spannung dem Strom für eine Schaltung, welche nur aus einer Spule bestehent, um $\varphi=\frac{\pi}{2}$ voraus eilt.
 
@@ -251,7 +254,7 @@ X_C:=\frac{U(t)}{I(t)}=-\frac{1}{\omega C}
 Ein $RLC$-Serienschaltkreis wie in Abb. \ref{fig:serienschaltung} muss nun aus einer Zusammensetzung der beiden erfolgen.
 Dafür definiert man die \emph{Impedanz}:
 \begin{align}
-Z_\text{Serie}:=\left|R+i(X_L+X_C)\right|=\left|R+i\left( \omega L-\frac{1}{\omega C} \right)\right|=\sqrt{R^2+(X_L+X_C)^2}\quad .
+|Z_\text{Serie}|=\left|R+i(X_L+X_C)\right|=\left|R+i\left( \omega L-\frac{1}{\omega C} \right)\right|=\sqrt{R^2+(X_L+X_C)^2}\quad .
 \label{eq:ZSerie}
 \end{align}
 Die Phasenverschiebung lässt sich (wie in Abb. \ref{fig:zeiger} zu erkennen und nach \cite[S. 1042]{giancoli}) durch
@@ -264,9 +267,13 @@ berechnen.
 \subsection{$LC$-Parallelschaltung}
 \label{sec:LC}
 Ist ein $LC$-Parallelschaltkreis wie in Abb. \ref{fig:parallel} vorhanden, so berechnet sich die Impedanz nach der Spannungsregel für Parallelkreise durch
-\begin{align*}
-Z_\text{Para}=\frac{i}{\frac{1}{X_L}+\frac{1}{X_C}}
-\end{align*}
+\begin{align}
+Z_{||}=\frac{-i}{\frac{1}{X_L}+\frac{1}{X_C}}=\left( \frac{1}{R_L+i\omega L}+i\omega C \right)^{-1}
+\end{align}
+und dem Blindwiderstand
+\begin{align}
+|Z|=\left[\left(\omega C - \frac{\omega L}{R_L^2+(\omega L)^2}\right)^2+\left(\frac{R_L}{R_L^2+(\omega L)^2}\right)^2\right]^{-\frac{1}{2}}\label{eq:ZPara}\quad .
+\end{align}
 \section{Durchführung}
 \label{sec:durchfuehrung}
 Der Aufbau besteht aus einem Frequenzgenerator, welcher einem veränderlichen Stromkreis aus Widerstand, Kondensator und Luftspule Spannung bereitstellt.
@@ -284,6 +291,7 @@ Dabei wird der Kondensator zunächst überbrückt und erst nach 10 Messungen mit
 Alle gemessenen Parameter sollen nun für möglichst viele verschiedene Frequenzen $f$ aufgezeichnet werden.
 Mit aktivem Kondensator müssen zusätzlich noch $U_C$ und $U_{R+L}$ sowie die Phasenverschiebung $\varphi$ notiert werden.
 Das Oszilloskop wird zur Bestimmung dieser einerseits zur Vermessung der Ausgangsspannung $U$ und andererseits zum Bestimmen des Stroms mit einer Stromzange verwendet.
+Bei der Nutzung der Stromzange ist darauf zu achten, dass sich in der Nähe keine anderen Magnetfelder oder stromdurchflossenen Kabel befinden, da dies die Messung stark verfälschen würde.
 Es kann nun die beiden Kurven mit Hilfe des Mathe-Modus direkt auf deren Phasenverschiebung hin auswerten.
 Damit dies zuverlässig geschieht, ist darauf zu achten, dass die jeweiligen $y$-Achsen so gewählt sind, dass die Kurven ungefähr die selben Ausschläge zeigen.
 Auch muss mehr als eine Periode angezeigt werden.
@@ -311,7 +319,7 @@ Dies sind:
 Während der Messungen ist darauf zu achten, dass die hier verwendeten Spannungen \emph{tödlich} sein können und dass deshalb auf keinen Fall blanke Kabelenden herumliegen dürfen.
 Auch muss vor jeder Änderung am Aufbau sichergestellt werden, dass die Spannung abgeschaltet ist.
 
-
+\newpage
 \section{Auswertung}
 \label{sec:auswertung}
 \subsection{Widerstand und Spule in Reihe}
@@ -329,7 +337,7 @@ Trägt man also $\omega^2$ gegen $Z^2$ auf, so ergibt sich eine Gerade $y=mx+b$ 
 Aus dem Fit der Abb. \ref{fig:messung1} ergibt sich so:
 \begin{align*}
 	L&=(386.3\pm 0.6)\,\si{\milli\henry}\quad \text{und}\\
-	R_\text{ges}&=(77.3 \pm 1.1)\,\si{\ohm}\qquad .
+	R_\text{ges}&=(77.3 \pm 1.1)\,\si{\ohm}\quad .
 \end{align*}
 \subsection{$RLC$-Serienschaltung}
 \begin{figure}[!htb]
@@ -339,14 +347,15 @@ Aus dem Fit der Abb. \ref{fig:messung1} ergibt sich so:
 	\label{fig:messung2}
 \end{figure}
 In Abb. \ref{fig:messung2} wird der Scheinwiderstand gegen die Kreisfrequenz aufgetragen.
-Der Fit nach der theoretischen Kurve ermittelte so 
+Der Fit nach der theoretischen Kurve \eqref{eq:ZSerie} ermittelte so 
 \begin{align*}
 	R &= (80.9 \pm 0.5)\,\si{\ohm}\quad ,\\
 	L &= (386.1 \pm 1.0)\,\si{\milli\henry}\quad \text{und}\\
 	C &= (1.799 \pm 0.005)\,\si{\micro\farad}
 \end{align*}
-als Werte.
-Mittelwerte aus allen Daten:
+als Werte.\\
+
+Die gewichteten Mittelwerte aus den bisherigen Werten betragen:
 \begin{align*}
 \overline L&=(386.2 \pm 0.6)\si{\milli\henry}\\
 \overline R&=(80.3 \pm 0.5)\,\si{\ohm}
@@ -360,7 +369,7 @@ Mittelwerte aus allen Daten:
 Nach \cite[S. 954]{tipler} gilt: 
 \begin{align*}
 \omega_{R\text{ LC}}&=\frac{1}{\sqrt{LC}}\quad \text{mit}\\
-\sigma_{\omega_{R\text{ LC}}}&=\frac{\sqrt{\frac{\sigma_{L}^{2}}{L^{2}} + \frac{\sigma_{C}^{2}}{C^{2}}}}{2 \cdot \sqrt{C} \cdot \sqrt{L}}\\
+\sigma_{\omega_{R\text{ LC}}}&=\frac{\sqrt{\frac{\sigma_{L}^{2}}{L^{2}} + \frac{\sigma_{C}^{2}}{C^{2}}}}{2 \cdot \sqrt{CL}}\\
 \omega_{R\text{ LC}}&=(1199.9 \pm 2.3)\,\si{\hertz}
 \end{align*}
 wobei die Werte aus dem Fit von Abb. \ref{fig:messung2} stammen.
@@ -387,17 +396,35 @@ Da um die Resonanzfrequenz $\omega_R$ der Arcustangens ungefähr linear ist, lä
 In Abb. \ref{fig:teilU} sind die Teilspannungen $U_C$ und $U_{L+R}$ in Abhängigkeit der Frequenz aufgetragen.
 Dabei fällt auf, dass beide ihr Maximum bei der Resonanzfrequenz haben.
 Außerdem sind diese hier ungefähr gleich groß, wie schon in Kapitel \ref{sec:impedanz} erwähnt.
+In der Abbildung \ref{fig:zeigerU} sind die Spannungen $U_C$ und $U_{L+R}$ sowie die Gesamtspannung $U$ maßstabsgetreu eingezeichnet, welche sich bei der Messung der Resonanzfrequenz ergeben.
+Dazu werden die Messwerte bei einer gemessenen Phasenverschiebung von $1\si\degree$ verwendet: $U=9.26\,$V, $U_C=52.9\,$V und $U_{L+R}=53.4\,$V. 
+Der eingezeichnete Winkel $\varphi=\arccos\left(\frac{U}{U_{L+R}}\right)=80\si\degree=1.396\,$rad ist die Phasenverschiebung zwischen $U_{L+R}$ und dem Strom $I$.
+Da hier kein kapazitiver Widerstand vorhanden ist, kann man diese Verschiebung auch mit der Formel \eqref{eq:PhaseSerie} ausrechnen. Dazu wird $C=0$ gesetzt:
+\begin{align*}
+	\varphi=\arctan\left(\frac{\omega_R L}{R}\right)\,.
+\end{align*}
+Da alle drei Größen fehlerbehaftet sind, folgt mit der Gauss'schen Fehlerfortpflanzung
+\begin{align*}	
+	\sigma_{\varphi}=\frac{1}{(L \omega_R)^{2} + R^{2}} \cdot \sqrt{(LR)^{2}\, \sigma_{\omega_R}^{2} + (L \omega_R)^{2}\,\sigma_{R}^{2}  + (R \omega_R)^{2}\,\sigma_{L}^{2}}\,.
+\end{align*}
+Für die gewichteten Mittelwerte $\overline{\omega_R}=(1199.9\pm 2.3)\,\si\hertz$, $\overline{R}=(80.3 \pm 0.5)\,\si\ohm$ und $\overline{L}=(386.2 \pm 0.6)\,\si{\milli\henry}$ ergibt sich eine Phasenverschiebung von
+\begin{align*}
+	\varphi=(1.399 \pm 0.001)\,\si{rad}\quad.
+\end{align*}
+
 \begin{figure}
 	\centering	
 	\adjustbox{height=0.4\textheight}{\input{SpannungenZeiger.pdf_tex}}
 	\caption{Zeigerdiagramm der Spannungen $U$, $U_C$ und $U_{L+R}$ der Serienschaltung bei der Resonanzfrequenz $\omega_R$}
+	\label{fig:zeigerU}
 \end{figure}
 \subsection{Parallelkreis}
-Aus Fit von Messung 3:
+In Abb. \ref{fig:messung3} ist der Scheinwiderstand $Z$ gegen die Kreisfrequenz für den Parallelkreis aufgetragen.
+Aus dem Fit nach Formel \eqref{eq:ZPara} dieser Abbildung ergibt sich
 \begin{align*}
-R &= (68\pm 5)\si{\kilo\ohm}\\
-L &= (370 \pm 10)\si{\milli\henry}\\
-C &= (1.88  \pm 0.05) \si{\micro\farad}
+R &= (68\pm 5)\si{\kilo\ohm}\quad ,\\
+L &= (370 \pm 10)\si{\milli\henry}\quad \text{und}\\
+C &= (1.88  \pm 0.05) \si{\micro\farad}\quad .
 \end{align*}
 \begin{figure}[!htb]
 	\centering
@@ -422,16 +449,35 @@ $\overline C$		&	$(1.800 \pm 0.005)\,\si{\micro\farad}$\\\hline
 \caption{Mittelwerte aus allen Messungen}
 \label{tab:mittelwerteserie}
 \end{table}
+
+\subsection{Serienschaltung}
+In Abb. \ref{fig:messung3} ist zu erkennen, dass der 2. aufgezeichnete Wert deutlich von der Theoriekurve abweicht, obwohl die anderen relativ dicht an ihr liegen.
+Schon während der Messung stach dieser Wert aus den anderen heraus.
+Dies könnte daran liegen, dass das Oszilloskop statt $-107\si\degree\quad +107\si\degree$ angezeigt hat, was $-73\si\degree$ entspräche und gut in die Kurve passte.\\
+
+Die graphische Auswertung der Teilspannungen aus Abb. \ref{fig:zeigerU} liefert eine Phasenverschiebung von $\varphi=1.396\,$rad, was von dem theoretischen Wert von $\varphi=(1.399 \pm 0.001)\,\si{rad}$ um $3\permil$ abweicht.
+Der Wert liegt zwar nicht im Fehlerintervall, aber dies könnte auch an einer falschen graphischen Darstellung liegen.\\
+
+Die Messwerte außer der Resonanzfrequenz (siehe Abschnitt \ref{sec:resodisku}) zeigten zwar größere Streuungen um die Mittelwerte, aber ihre Fehlerintervalle überschneiden sich.
+
+
+
 \subsection{Resonanzfrequenz}
+\label{sec:resodisku}
+Aus allen Messungen sticht die der Resonanzfrequenz positiv heraus.
 Die Werte für die Resonanzfrequenz $\omega_R$ waren durchgehend auffallend konsistent und wichen von dem gewichteten Mittelwert von $\overline{\omega_R}=(1199.9\pm2.3)\,\si\hertz$ um höchstens $2\,\si\hertz$ ab.
 Dies ist insofern bemerkenswert, als dass die Fehlerintervalle bis zu 10\% des Messwertes ausmachten.
 Es spricht dafür, dass keine der Messungen einen systematischen Fehler diesbezüglich aufweist.
 
-\subsection{Serienschaltung}
-
 \subsection{Parallelschaltung}
+Da mit der Parallelschaltung nur einen Versuch durchgefürt wurde, sind keine Vergleiche möglich.
+Allerdings 
 
-
+\subsection{angenommene Fehler}
+Die Fehler der Widerstandsmessungen wurden mit $0.1\si\ohm$ abgeschätzt, da das Messgerät diese Genauigkeit bereitstellte.
+Die Frequenzmessungen wurden als präzise eingestuft, da hier die kleinsten Fehler zu erwarten waren und somit die anderen Messungen im Verhältnis deutlich unpräziser sind.
+Bei den Spannungsmessungen wurden Fehlerintervalle von $0.01\,\si\volt$ angenommen, was die Genauigkeit der Messgeräte von $(0.25\%+1\,\text{Digit})$ nach oben abschätzt.
+Ebenso wurde die Strommessung mit $\sigma_I=2\%$ abgeschätzt, was höher als die eigentliche Genauigkeit von $(1\%+1\,\text{Digit})$ ist.
 
 
 \bibliography{literatur}
