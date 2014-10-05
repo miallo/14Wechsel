@@ -15,7 +15,7 @@ fit f(x) 'messung2.dat' u (2*pi*$1/1000):($2/$5):(sqrt((0.01/$5)**2+(0.02*$2/$5)
 
 
 p 'messung2.dat' u (2*pi*$1/1000):($2/$5):(sqrt((0.01/$5)**2+(0.02*$2/$5)**2)) w e t'Messwerte',\
-f(x) t'Fit'
+f(x) t'Fit nach Gl. \eqref{eq:ZSerie}'
 
 set output
 !epstopdf messung2.eps

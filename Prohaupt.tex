@@ -201,6 +201,10 @@ Dies ist analog zum Ohmschen Widerstand $R=\frac{U}{I}$, wodurch sich der Name S
 In Abb. \ref{fig:zeiger} ist ein Beispiel aufgetragen, in dem man die verschiedenen (Blind-)Widerstände einer Schaltung erkennen kann, die an den einzelnen Bauteilen vorhanden sind.
 Im Resonanzfall ist $X_L=X_C$, wodurch die gesammte Impedanz $Z$ real wird und die Phasenverschiebung $\varphi=0$ verschwindet.
 
+Die Phasenverschiebung ist definiert als
+\begin{align}
+\varphi=\arctan\frac{\Im(Z)}{\Re(Z)}
+\end{align}
 
 \subsection{Ohmscher Widerstand}
 Für einen Ohmschen Widerstand gilt 
@@ -246,7 +250,7 @@ X_C:=\frac{U(t)}{I(t)}=-\frac{1}{\omega C}
 Ein $RLC$-Serienschaltkreis wie in Abb. \ref{fig:serienschaltung} muss nun aus einer Zusammensetzung der beiden erfolgen.
 Dafür definiert man die \emph{Impedanz}:
 \begin{align}
-Z_\text{Serie}:=\left|R+i(X_C+X_L)\right|=\left|R+i\left( \omega L-\frac{1}{\omega C} \right)\right|=\sqrt{R^2+(X_L+X_C)^2}\quad .
+Z_\text{Serie}:=\left|R+i(X_L+X_C)\right|=\left|R+i\left( \omega L-\frac{1}{\omega C} \right)\right|=\sqrt{R^2+(X_L+X_C)^2}\quad .
 \label{eq:ZSerie}
 \end{align}
 Die Phasenverschiebung lässt sich (wie in Abb. \ref{fig:zeiger} zu erkennen und nach \cite[S. 1042]{giancoli}) durch
@@ -316,15 +320,15 @@ Auch muss vor jeder Änderung am Aufbau sichergestellt werden, dass die Spannung
 	\caption{Quadrat des Scheinwiderstands als Funktion der Kreisfrequenz.}
 	\label{fig:messung1}
 \end{figure}
-Quadriert man Gleichung \eqref{eq:ZSerie}, so erhält man
+Da zu Beginn der Kondensator überbrückt ist, ergibt sich aus der quadrierten Gleichung \eqref{eq:ZSerie} nur
 \begin{align*}
-Z^2=R^2+(X_L+X_C)^2\quad .
+Z^2=R^2+\omega^2L^2\quad .
 \end{align*}
-
-
+Trägt man also $\omega^2$ gegen $Z^2$ auf, so ergibt sich eine Gerade $y=mx+b$ mit $b=R^2$ und $m=L^2$
+Aus dem Fit der Abb. \ref{fig:messung1} ergibt sich so:
 \begin{align*}
-	L&=(386.3\pm 0.6)\,\si{\milli\henry}\\
-	R_\text{ges}&=(77.3 \pm 1.1)\,\si{\ohm}
+	L&=(386.3\pm 0.6)\,\si{\milli\henry}\quad \text{und}\\
+	R_\text{ges}&=(77.3 \pm 1.1)\,\si{\ohm}\qquad .
 \end{align*}
 \subsection{$RLC$-Serienschaltung}
 \begin{figure}[!htb]
@@ -333,12 +337,14 @@ Z^2=R^2+(X_L+X_C)^2\quad .
 	\caption{Scheinwiderstand des Serienresonanzkreis als Funktion der Kreisfrequenz.}
 	\label{fig:messung2}
 \end{figure}
-Aus
+In Abb. \ref{fig:messung2} wird der Scheinwiderstand gegen die Kreisfrequenz aufgetragen.
+Der Fit nach der theoretischen Kurve ermittelte so 
 \begin{align*}
-	R &= (80.9 \pm 0.5)\,\si{\ohm}\\
-	L &= (386.1 \pm 1.0)\,\si{\milli\henry}\\
+	R &= (80.9 \pm 0.5)\,\si{\ohm}\quad ,\\
+	L &= (386.1 \pm 1.0)\,\si{\milli\henry}\quad \text{und}\\
 	C &= (1.799 \pm 0.005)\,\si{\micro\farad}
 \end{align*}
+als Werte.
 Mittelwerte aus allen Daten:
 \begin{align*}
 \overline L&=(386.2 \pm 0.6)\si{\milli\henry}\\
