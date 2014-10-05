@@ -375,6 +375,7 @@ Nach \cite[S. 954]{tipler} gilt:
 wobei die Werte aus dem Fit von Abb. \ref{fig:messung2} stammen.
 Aus dem Fit nach Gleichung \eqref{eq:PhaseSerie} von Abb. \ref{fig:phase} kann man $L$ und $C$ bestimmen.
 Dies ist möglich, da für $R=80.3\,\si\ohm$ der Mittelwert der vorigen Messungen verwendet wurde.
+Ohne diese Angabe ergeben sich Fehler der Werte von $3000\%$.
 Es ergeben sich:
 \begin{align*}
 C&= (1.80 \pm 0.23)\,\si{\micro\farad}\quad\text{und}\\ 
@@ -422,7 +423,7 @@ Für die gewichteten Mittelwerte $\overline{\omega_R}=(1199.9\pm 2.3)\,\si\hertz
 In Abb. \ref{fig:messung3} ist der Scheinwiderstand $Z$ gegen die Kreisfrequenz für den Parallelkreis aufgetragen.
 Aus dem Fit nach Formel \eqref{eq:ZPara} dieser Abbildung ergibt sich
 \begin{align*}
-R &= (68\pm 5)\si{\kilo\ohm}\quad ,\\
+R_L &= (68\pm 5)\si{\kilo\ohm}\quad ,\\
 L &= (370 \pm 10)\si{\milli\henry}\quad \text{und}\\
 C &= (1.88  \pm 0.05) \si{\micro\farad}\quad .
 \end{align*}
@@ -453,13 +454,15 @@ $\overline C$		&	$(1.800 \pm 0.005)\,\si{\micro\farad}$\\\hline
 \subsection{Serienschaltung}
 In Abb. \ref{fig:messung3} ist zu erkennen, dass der 2. aufgezeichnete Wert deutlich von der Theoriekurve abweicht, obwohl die anderen relativ dicht an ihr liegen.
 Schon während der Messung stach dieser Wert aus den anderen heraus.
-Dies könnte daran liegen, dass das Oszilloskop statt $-107\si\degree\quad +107\si\degree$ angezeigt hat, was $-73\si\degree$ entspräche und gut in die Kurve passte.\\
+Dies könnte daran liegen, dass das Oszilloskop statt $-107\si\degree\quad +107\si\degree$ angezeigt hat, was $-73\si\degree$ entspräche und gut in die Kurve passte.
+Dies würde die großen Fehler im Fit dieser Daten erklären und die daraus resultierenden Ungenauigkeiten bei der Bestimmung der Kapazität $C$ und der Induktivität $L$.\\
 
 Die graphische Auswertung der Teilspannungen aus Abb. \ref{fig:zeigerU} liefert eine Phasenverschiebung von $\varphi=1.396\,$rad, was von dem theoretischen Wert von $\varphi=(1.399 \pm 0.001)\,\si{rad}$ um $3\permil$ abweicht.
 Der Wert liegt zwar nicht im Fehlerintervall, aber dies könnte auch an einer falschen graphischen Darstellung liegen.\\
 
 Die Messwerte außer der Resonanzfrequenz (siehe Abschnitt \ref{sec:resodisku}) zeigten zwar größere Streuungen um die Mittelwerte, aber ihre Fehlerintervalle überschneiden sich.
-
+Da der Gesammtwiderstand in einer Reihenschaltung sich addiert, müsste $R=R_l+R_\omega$ sein.
+Das aus den mit einem Multimeter gemessenen Widerständen $R_L+R_\omega=75.7\,\si\ohm$ statt der berechneten $R_{L+\omega}=80.3\,\si\ohm$ (eine Abweichung von 6\%) liegt daran, dass das Amperemeter noch in dem Stromkreis mit eingeschlossen war.
 
 
 \subsection{Resonanzfrequenz}
@@ -471,7 +474,8 @@ Es spricht dafür, dass keine der Messungen einen systematischen Fehler diesbez�
 
 \subsection{Parallelschaltung}
 Da mit der Parallelschaltung nur einen Versuch durchgefürt wurde, sind keine Vergleiche möglich.
-Allerdings 
+Allerdings ist der gemessene Spulenwiderstand $R_L$ mit $R_L=(68\pm 5)\si{\kilo\ohm}$ nur um $4\%$ größer, als der gemessene mit $R_L=(65.6\pm0.1)\si\ohm$.
+Dieser Wert liegt auch in dem sehr großen Fehlerintervall.
 
 \subsection{angenommene Fehler}
 Die Fehler der Widerstandsmessungen wurden mit $0.1\si\ohm$ abgeschätzt, da das Messgerät diese Genauigkeit bereitstellte.
