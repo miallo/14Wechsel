@@ -192,7 +192,7 @@ Diese hängt ab von der jeweiligen Schaltung ab und wird in den Kapiteln \ref{se
 \caption{Zeigerdiagramm, welches die Realteile der Spannung gegen ihren Imaginärteil in einer Serienschaltung aufträgt.}
 \label{fig:zeiger}
 \end{figure}
-Die Impedanz $Z$ berechnet sich im allgemeinen durch
+Die Impedanz $Z$ berechnet sich nach \cite[S. 236]{nolting3} im Allgemeinen durch
 \begin{align*}
 Z=\frac{U(t)}{I(t)}\quad .
 \end{align*}
@@ -201,7 +201,7 @@ Dies ist analog zum Ohmschen Widerstand $R=\frac{U}{I}$, wodurch sich der Name S
 In Abb. \ref{fig:zeiger} ist ein Beispiel aufgetragen, in dem man die verschiedenen (Blind-)Widerstände einer Schaltung erkennen kann, die an den einzelnen Bauteilen vorhanden sind.
 Im Resonanzfall ist $X_L=X_C$, wodurch die gesammte Impedanz $Z$ real wird und die Phasenverschiebung $\varphi=0$ verschwindet.
 
-Die Phasenverschiebung ist definiert als
+Die Phasenverschiebung ist nach \cite[S. 236]{nolting3} definiert als
 \begin{align}
 \varphi=\arctan\frac{\Im(Z)}{\Re(Z)}
 \end{align}
@@ -348,12 +348,7 @@ als Werte.
 Mittelwerte aus allen Daten:
 \begin{align*}
 \overline L&=(386.2 \pm 0.6)\si{\milli\henry}\\
-\overline R&=(80.2836 \pm 0.455183)\,\si{\ohm}
-\end{align*}
-\begin{align*}
-\omega_\text{LC}&=\frac{1}{\sqrt{LC}}\\
-\sigma_{\omega_\text{LC}}&=\frac{\sqrt{\frac{\sigma_{L}^{2}}{L^{2}} + \frac{\sigma_{C}^{2}}{C^{2}}}}{2 \cdot \sqrt{C} \cdot \sqrt{L}}\\
-\omega_\text{LC}&=(1199.9 \pm 2.3)\,\si{\hertz}
+\overline R&=(80.3 \pm 0.5)\,\si{\ohm}
 \end{align*}
 \begin{figure}[!htb]
 	\centering
@@ -361,7 +356,20 @@ Mittelwerte aus allen Daten:
 	\caption{Phasenverschiebung des Serienresonanzkreises.}
 	\label{fig:phase}
 \end{figure}
-
+Aus der 
+\begin{align*}
+\omega_{R\text{ LC}}&=\frac{1}{\sqrt{LC}}\\
+\sigma_{\omega_{R\text{ LC}}}&=\frac{\sqrt{\frac{\sigma_{L}^{2}}{L^{2}} + \frac{\sigma_{C}^{2}}{C^{2}}}}{2 \cdot \sqrt{C} \cdot \sqrt{L}}\\
+\omega_{R\text{ LC}}&=(1199.9 \pm 2.3)\,\si{\hertz}
+\end{align*}
+Aus dem Fit nach Gleichung \eqref{eq:PhaseSerie} von Abb. \ref{fig:phase} kann man $L$ und $C$ bestimmen.
+Dies ist möglich, da für $R=80.3\,\si\ohm$ der Mittelwert der vorigen Messungen verwendet wurde.
+Es ergeben sich:
+\begin{align*}
+C&= (1.80 \pm 0.23)\,\si{\micro\farad}\quad\text{und}\\ 
+L&= (390\pm 50)\,\si{\milli\henry}\quad .
+\end{align*}
+Da um die Resonanzfrequenz $\omega_R$ der Arcustangens ungefähr linear ist, lässt sich in diesem Bereich eine Gerade $y=m\cdot x+b$ an die Messwerte fitten, für die gilt:
 \begin{align*}
 \omega_\text{Phase}&=- \frac{b}{m}\\
 \sigma_{\omega_\text{Phase}}&=\frac{1}{m^{2}} \cdot \sqrt{b^{2} \cdot \sigma_{m}^{2} + m^{2} \cdot \sigma_{b}^{2}}\\
