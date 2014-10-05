@@ -3,7 +3,7 @@
 % Näheres zu "scrartcl" bzw. "scrreprt" und "scrbook" siehe KOMA-Skript Doku
 \documentclass[12pt,a4paper,titlepage,headinclude,bibtotoc]{scrartcl}
 
-
+\usepackage{adjustbox}
 %---- Allgemeine Layout Einstellungen ------------------------------------------
 
 % Für Kopf und Fußzeilen, siehe auch KOMA-Skript Doku
@@ -186,6 +186,7 @@ wobei $\varphi$ die Phasenverschiebung ist.
 Diese hängt ab von der jeweiligen Schaltung ab und wird in den Kapiteln \ref{sec:RLC} und \ref{sec:LC} behandelt.
 
 \subsection{Impedanz}
+\label{sec:impedanz}
 \begin{figure}[!h]
 \centering
 \input{zeiger.pdf_tex}
@@ -356,12 +357,13 @@ Mittelwerte aus allen Daten:
 	\caption{Phasenverschiebung des Serienresonanzkreises.}
 	\label{fig:phase}
 \end{figure}
-Aus der 
+Nach \cite[S. 954]{tipler} gilt: 
 \begin{align*}
-\omega_{R\text{ LC}}&=\frac{1}{\sqrt{LC}}\\
+\omega_{R\text{ LC}}&=\frac{1}{\sqrt{LC}}\quad \text{mit}\\
 \sigma_{\omega_{R\text{ LC}}}&=\frac{\sqrt{\frac{\sigma_{L}^{2}}{L^{2}} + \frac{\sigma_{C}^{2}}{C^{2}}}}{2 \cdot \sqrt{C} \cdot \sqrt{L}}\\
 \omega_{R\text{ LC}}&=(1199.9 \pm 2.3)\,\si{\hertz}
 \end{align*}
+wobei die Werte aus dem Fit von Abb. \ref{fig:messung2} stammen.
 Aus dem Fit nach Gleichung \eqref{eq:PhaseSerie} von Abb. \ref{fig:phase} kann man $L$ und $C$ bestimmen.
 Dies ist möglich, da für $R=80.3\,\si\ohm$ der Mittelwert der vorigen Messungen verwendet wurde.
 Es ergeben sich:
@@ -375,11 +377,20 @@ Da um die Resonanzfrequenz $\omega_R$ der Arcustangens ungefähr linear ist, lä
 \sigma_{\omega_\text{Phase}}&=\frac{1}{m^{2}} \cdot \sqrt{b^{2} \cdot \sigma_{m}^{2} + m^{2} \cdot \sigma_{b}^{2}}\\
 \omega_\text{Phase}&=(1200 \pm 120)\,\si\hertz
 \end{align*}
+\subsubsection{Teilspannungen}
 \begin{figure}[!htb]
 	\centering
 	\input{spannungen.tex}
 	\caption{Teilspannungen des Serienresonanzkreises.}
 	\label{fig:teilU}
+\end{figure}
+In Abb. \ref{fig:teilU} sind die Teilspannungen $U_C$ und $U_{L+R}$ in Abhängigkeit der Frequenz aufgetragen.
+Dabei fällt auf, dass beide ihr Maximum bei der Resonanzfrequenz haben.
+Außerdem sind diese hier ungefähr gleich groß, wie schon in Kapitel \ref{sec:impedanz} erwähnt.
+\begin{figure}
+	\centering	
+	\adjustbox{height=0.4\textheight}{\input{SpannungenZeiger.pdf_tex}}
+	\caption{Zeigerdiagramm der Spannungen $U$, $U_C$ und $U_{L+R}$ der Serienschaltung bei der Resonanzfrequenz $\omega_R$}
 \end{figure}
 \subsection{Parallelkreis}
 Aus Fit von Messung 3:
@@ -397,6 +408,31 @@ C &= (1.88  \pm 0.05) \si{\micro\farad}
 
 \section{Diskussion}
 \label{sec:diskussion}
+\renewcommand{\arraystretch}{1.4} 
+\begin{table}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Messgröße		&	Gewichteter Mittelwert\\\hline\hline
+$\overline{\omega_R}$	&	$(1199.9\pm 2.3)\,\si{\hertz}$\\\hline
+$\overline R$		&	$(80.3 \pm 0.5)\,\si{\ohm}$\\\hline
+$\overline L$		&	$(386.2 \pm 0.6)\,\si{\milli\henry}$\\\hline
+$\overline C$		&	$(1.800 \pm 0.005)\,\si{\micro\farad}$\\\hline
+\end{tabular}
+\caption{Mittelwerte aus allen Messungen}
+\label{tab:mittelwerteserie}
+\end{table}
+\subsection{Resonanzfrequenz}
+Die Werte für die Resonanzfrequenz $\omega_R$ waren durchgehend auffallend konsistent und wichen von dem gewichteten Mittelwert von $\overline{\omega_R}=(1199.9\pm2.3)\,\si\hertz$ um höchstens $2\,\si\hertz$ ab.
+Dies ist insofern bemerkenswert, als dass die Fehlerintervalle bis zu 10\% des Messwertes ausmachten.
+Es spricht dafür, dass keine der Messungen einen systematischen Fehler diesbezüglich aufweist.
+
+\subsection{Serienschaltung}
+
+\subsection{Parallelschaltung}
+
+
+
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
