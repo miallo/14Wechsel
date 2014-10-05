@@ -163,18 +163,20 @@ Eingegangen am:
 \section{Einleitung}
 \label{sec:einleitung}
 Wechselströme spielen in der modernen Energieversorgung eine zentrale Rolle.
-Um so wichtiger ist es für die Effizienz, die genauen Eigenschaften von \emph{Wechselstrom-Widerständen} zu kennen.
-Dies soll in diesem Versuch erziehlt werden.
+Um so wichtiger ist es, die Effekte und genauen Eigenschaften von \emph{Wechselstrom-Widerständen} zu kennen.
+Auch die Phasenverschiebung von Strom zu Spannung soll in diesem Versuch beobachtet werden.
 \section{Theorie}
 \label{sec:theorie}
 \subsection{Wechselspannungen und -ströme}
-Unter einer Wechselspannung versteht man eine Spannung, die einen zeitlichen Verlauf von $U(t)= U_0\cdot\sin(\omega t)$ besitzt.
+Unter einer Wechselspannung versteht man eine Spannung, die einen periodischen zeitlichen Verlauf besitzt.
+Die zumeist verwendete ist die sinusförmige mit $U(t)=U_0\cdot\sin(\omega t)$.
 Da hierbei die maximale Spannung $U_0$ nur den kürzesten Teil der Zeit anliegt, ist die Definition eines \emph{Effektivwertes} sinnvoll.
-Diese ist so definiert, dass eine Gleichspannung diesen Wertes die selbe Leistung erbringt, nämlich für $\sin$-förmige Spannungen:
+Diese ist so definiert, dass eine Gleichspannung diesen Wertes die selbe Leistung erbringt, nämlich:
 \begin{align*}
 U_\text{eff}=\frac{U_0}{\sqrt2}\quad .
 \end{align*}
-Die in europäischen Haushalten übliche Wechselspannung von $U_\text{eff}=220\,\si\volt$ besitzt so eine Maximalspannung von $U_0=\sqrt2\cdot U_\text{eff}=311\,\si\volt$.\\
+Die in europäischen Haushalten übliche Wechselspannung von $U_\text{eff}=220\,\si\volt$ besitzt so eine Maximalspannung von $U_0=\sqrt2\cdot U_\text{eff}=311\,\si\volt$.
+Ebenso ist auch der Effektivstrom definiert.\\
 
 Der fließende Strom $I$ besitzt nun die Form
 \begin{align*}
@@ -190,17 +192,22 @@ Diese hängt ab von der jeweiligen Schaltung ab und wird in den Kapiteln \ref{se
 \caption{Zeigerdiagramm, welches die Realteile der Spannung gegen ihren Imaginärteil in einer Serienschaltung aufträgt.}
 \label{fig:zeiger}
 \end{figure}
-Die Impedanz $Z$ berechnet sich je nach Aufbau aus den einzelnen Spannungen und Ströme allgemein durch
-\begin{align}
+Die Impedanz $Z$ berechnet sich im allgemeinen durch
+\begin{align*}
 Z=\frac{U(t)}{I(t)}\quad .
-\end{align}
+\end{align*}
 Dies ist analog zum Ohmschen Widerstand $R=\frac{U}{I}$, wodurch sich der Name Scheinwiderstand $|Z|$ für ihren Betrag ergibt.
 
-In Abb. \ref{fig:zeiger} ist ein Beispiel aufgetragen, in dem man die verschiedenen Spannungen einer Serienschaltung erkennen kann, die an den einzelnen Bauteilen abfallen.
-Im Resonanzfall ist $U_L=U_C$, wodurch die gesammte Spannung $U_{L+C+R}$ real wird und die Phasenverschiebung $\varphi=0$ verschwindet.
+In Abb. \ref{fig:zeiger} ist ein Beispiel aufgetragen, in dem man die verschiedenen (Blind-)Widerstände einer Schaltung erkennen kann, die an den einzelnen Bauteilen vorhanden sind.
+Im Resonanzfall ist $X_L=X_C$, wodurch die gesammte Impedanz $Z$ real wird und die Phasenverschiebung $\varphi=0$ verschwindet.
 
 
-
+\subsection{Ohmscher Widerstand}
+Für einen Ohmschen Widerstand gilt 
+\begin{align*}
+U(t)=R\cdot I(t)\quad .
+\end{align*}
+Strom und Spannung sind also in Phase.
 \subsection{Induktivität}
 Nach \cite[S. 313]{griffith} gilt für eine Spule
 \begin{align}
@@ -240,10 +247,12 @@ Ein $RLC$-Serienschaltkreis wie in Abb. \ref{fig:serienschaltung} muss nun aus e
 Dafür definiert man die \emph{Impedanz}:
 \begin{align}
 Z_\text{Serie}:=\left|R+i(X_C+X_L)\right|=\left|R+i\left( \omega L-\frac{1}{\omega C} \right)\right|=\sqrt{R^2+(X_L+X_C)^2}\quad .
+\label{eq:ZSerie}
 \end{align}
 Die Phasenverschiebung lässt sich (wie in Abb. \ref{fig:zeiger} zu erkennen und nach \cite[S. 1042]{giancoli}) durch
 \begin{align}
 \varphi=\arctan\left( \frac{X_L+X_C}{R} \right)
+\label{eq:PhaseSerie}
 \end{align}
 berechnen.
 
@@ -260,17 +269,19 @@ Die verschiedenen Parameter Ausgangsspannung $U$, Spannung an Widerstand und Spu
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.6\linewidth]{serie}
-\caption{Schaltplan der Serienschaltung von \cite[4.10.2014, 15:30]{LP14}.}
+\includegraphics[width=0.5\linewidth]{serie}
+\caption{Schaltplan der Serienschaltung nach \cite[4.10.2014, 15:30]{LP14}.}
 \label{fig:serienschaltung}
 \end{figure}
-Zunächst baut man einen Serienschaltkreis aus allen Bauteilen auf.
-Das Oszilloskop wird zur Bestimmung der Phasenverschiebung einerseits zur Vermessung der Ausgangsspannung $U$ und andererseits zum bestimmen des Stroms mit einer Messzange verwendet.
+Zunächst baut man den Serienschaltkreis aus Abb. \ref{fig:serienschaltung} auf.
+
+Dabei wird der Kondensator zunächst überbrückt und erst nach 10 Messungen mit verschiedenen Frequenzen, bei denen Strom $I$ und Spannung $U$ protokolliert werden, hinzugeschaltet.
+Alle gemessenen Parameter sollen nun für möglichst viele verschiedene Frequenzen $f$ aufgezeichnet werden.
+Mit aktivem Kondensator müssen zusätzlich noch $U_C$ und $U_{R+L}$ sowie die Phasenverschiebung $\varphi$ notiert werden.
+Das Oszilloskop wird zur Bestimmung dieser einerseits zur Vermessung der Ausgangsspannung $U$ und andererseits zum Bestimmen des Stroms mit einer Stromzange verwendet.
 Es kann nun die beiden Kurven mit Hilfe des Mathe-Modus direkt auf deren Phasenverschiebung hin auswerten.
 Damit dies zuverlässig geschieht, ist darauf zu achten, dass die jeweiligen $y$-Achsen so gewählt sind, dass die Kurven ungefähr die selben Ausschläge zeigen.
 Auch muss mehr als eine Periode angezeigt werden.
-
-Alle gemessenen Parameter sollen nun für möglichst viele verschiedene Frequenzen $f$ aufgezeichnet werden.
 Dabei ist der Resonanzbereich besonders genau zu untersuchen.\\
 
 \begin{figure}[!h]
@@ -293,7 +304,7 @@ Dies sind:
 \end{itemize}
 
 Während der Messungen ist darauf zu achten, dass die hier verwendeten Spannungen \emph{tödlich} sein können und dass deshalb auf keinen Fall blanke Kabelenden herumliegen dürfen.
-Auch muss vor jeden Änderungen am Aufbau sichergestellt werden, dass die Spannung abgeschaltet ist.
+Auch muss vor jeder Änderung am Aufbau sichergestellt werden, dass die Spannung abgeschaltet ist.
 
 
 \section{Auswertung}
@@ -305,11 +316,16 @@ Auch muss vor jeden Änderungen am Aufbau sichergestellt werden, dass die Spannu
 	\caption{Quadrat des Scheinwiderstands als Funktion der Kreisfrequenz.}
 	\label{fig:messung1}
 \end{figure}
+Quadriert man Gleichung \eqref{eq:ZSerie}, so erhält man
+\begin{align*}
+Z^2=R^2+(X_L+X_C)^2\quad .
+\end{align*}
 
-\begin{align}
+
+\begin{align*}
 	L&=(386.3\pm 0.6)\,\si{\milli\henry}\\
 	R_\text{ges}&=(77.3 \pm 1.1)\,\si{\ohm}
-\end{align}
+\end{align*}
 \subsection{$RLC$-Serienschaltung}
 \begin{figure}[!htb]
 	\centering
@@ -318,21 +334,21 @@ Auch muss vor jeden Änderungen am Aufbau sichergestellt werden, dass die Spannu
 	\label{fig:messung2}
 \end{figure}
 Aus
-\begin{align}
+\begin{align*}
 	R &= (80.9 \pm 0.5)\,\si{\ohm}\\
 	L &= (386.1 \pm 1.0)\,\si{\milli\henry}\\
 	C &= (1.799 \pm 0.005)\,\si{\micro\farad}
-\end{align}
+\end{align*}
 Mittelwerte aus allen Daten:
-\begin{align}
+\begin{align*}
 \overline L&=(386.2 \pm 0.6)\si{\milli\henry}\\
 \overline R&=(80.2836 \pm 0.455183)\,\si{\ohm}
-\end{align}
-\begin{align}
+\end{align*}
+\begin{align*}
 \omega_\text{LC}&=\frac{1}{\sqrt{LC}}\\
 \sigma_{\omega_\text{LC}}&=\frac{\sqrt{\frac{\sigma_{L}^{2}}{L^{2}} + \frac{\sigma_{C}^{2}}{C^{2}}}}{2 \cdot \sqrt{C} \cdot \sqrt{L}}\\
 \omega_\text{LC}&=(1199.9 \pm 2.3)\,\si{\hertz}
-\end{align}
+\end{align*}
 \begin{figure}[!htb]
 	\centering
 	\input{phase.tex}
@@ -340,11 +356,11 @@ Mittelwerte aus allen Daten:
 	\label{fig:phase}
 \end{figure}
 
-\begin{align}
+\begin{align*}
 \omega_\text{Phase}&=- \frac{b}{m}\\
 \sigma_{\omega_\text{Phase}}&=\frac{1}{m^{2}} \cdot \sqrt{b^{2} \cdot \sigma_{m}^{2} + m^{2} \cdot \sigma_{b}^{2}}\\
 \omega_\text{Phase}&=(1200 \pm 120)\,\si\hertz
-\end{align}
+\end{align*}
 \begin{figure}[!htb]
 	\centering
 	\input{spannungen.tex}
@@ -353,11 +369,11 @@ Mittelwerte aus allen Daten:
 \end{figure}
 \subsection{Parallelkreis}
 Aus Fit von Messung 3:
-\begin{align}
+\begin{align*}
 R &= (68\pm 5)\si{\kilo\ohm}\\
 L &= (370 \pm 10)\si{\milli\henry}\\
 C &= (1.88  \pm 0.05) \si{\micro\farad}
-\end{align}
+\end{align*}
 \begin{figure}[!htb]
 	\centering
 	\input{messung3.tex}

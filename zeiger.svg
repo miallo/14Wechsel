@@ -123,14 +123,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="395.81467"
-     inkscape:cy="748.38005"
+     inkscape:zoom="3.959798"
+     inkscape:cx="374.08378"
+     inkscape:cy="799.31442"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="965"
+     inkscape:window-width="1920"
+     inkscape:window-height="1021"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1" />
@@ -198,7 +198,7 @@
            width="17.677675"
            id="rect8780" /></flowRegion><flowPara
          style="font-size:4px"
-         id="flowPara8782">$U_R$</flowPara></flowRoot>    <flowRoot
+         id="flowPara8782">$X_R$</flowPara></flowRoot>    <flowRoot
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        id="flowRoot8776-4"
        xml:space="preserve"
@@ -210,7 +210,7 @@
            width="22.728437"
            id="rect8780-4" /></flowRegion><flowPara
          style="font-size:4px"
-         id="flowPara8782-7">$U_L$</flowPara></flowRoot>    <flowRoot
+         id="flowPara8782-7">$X_L$</flowPara></flowRoot>    <flowRoot
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        id="flowRoot8776-7"
        xml:space="preserve"
@@ -218,11 +218,11 @@
          id="flowRegion8778-19"><rect
            y="304.8493"
            x="340.92648"
-           height="5.0612221"
-           width="31.500437"
+           height="5.7568502"
+           width="6.5409842"
            id="rect8780-0" /></flowRegion><flowPara
          style="font-size:4px"
-         id="flowPara8782-2">$U_{L+C+R}$</flowPara></flowRoot>    <flowRoot
+         id="flowPara8782-2">Z</flowPara></flowRoot>    <flowRoot
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        id="flowRoot8776-57"
        xml:space="preserve"
@@ -286,6 +286,6 @@
          id="tspan9355"
          x="344.48734"
          y="323.21002"
-         style="font-size:4px">$U_C$</tspan></text>
+         style="font-size:4px">$X_C$</tspan></text>
   </g>
 </svg>

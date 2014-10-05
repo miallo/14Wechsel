@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{59.66458601bp}%
+    \setlength{\unitlength}{55.78198283bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,14 +48,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,2.77137988)%
+  \begin{picture}(1,2.96427672)%
     \put(0,0){\includegraphics[width=\unitlength]{zeiger.pdf}}%
-    \put(0.35738125,0.66451726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16547776\unitlength}\raggedright $U_R$\end{minipage}}}%
-    \put(-0.00321122,1.65801501){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.212757\unitlength}\raggedright $U_L$\end{minipage}}}%
-    \put(0.72570855,1.47386357){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29487026\unitlength}\raggedright $U_{L+C+R}$\end{minipage}}}%
-    \put(0.8302267,0.7556597){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17966156\unitlength}\raggedright $\Re$\end{minipage}}}%
-    \put(0.21065126,2.78055427){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1702056\unitlength}\raggedright $\Im$\end{minipage}}}%
-    \put(0.37135444,0.8065981){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\varphi$}}}%
-    \put(0.02960839,0.39608056){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$U_C$}}}%
+    \put(0.38225612,0.71076977){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17699554\unitlength}\raggedright $X_R$\end{minipage}}}%
+    \put(-0.00343473,1.77341812){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22756556\unitlength}\raggedright $X_L$\end{minipage}}}%
+    \put(0.77622017,1.57644916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06549081\unitlength}\raggedright Z\end{minipage}}}%
+    \put(0.88801311,0.80825602){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19216657\unitlength}\raggedright $\Re$\end{minipage}}}%
+    \put(0.22531325,2.97408967){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18205245\unitlength}\raggedright $\Im$\end{minipage}}}%
+    \put(0.39720189,0.86273989){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\varphi$}}}%
+    \put(0.03166923,0.42364902){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$X_C$}}}%
   \end{picture}%
 \endgroup%
