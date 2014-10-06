@@ -137,7 +137,7 @@ Versuch 14\\[1.5ex]
 \begin{Large}
 \begin{tabular}{ll}
 Praktikant: &  Michael Lohmann\\
- Versuchspartner &  Felix Kurtz\\
+ Versuchspartner: &  Felix Kurtz\\
  E-Mail: & m.lohmann@stud.uni-goettingen.de\\
  Betreuer: & Björn Klaas\\
  Versuchsdatum: & 08.09.2014\\
@@ -186,14 +186,14 @@ Der fließende Strom $I$ besitzt nun die Form
 I=I_0\cdot\sin(\omega t+\varphi)
 \end{align*}
 wobei $\varphi$ die Phasenverschiebung ist.
-Diese hängt ab von der jeweiligen Schaltung ab und wird in den Kapiteln \ref{sec:RLC} und \ref{sec:LC} behandelt.
+Diese hängt ab von der jeweiligen Schaltung ab und wird in dem Kapitel \ref{sec:impedanz} behandelt.
 
 \subsection{Impedanz}
 \label{sec:impedanz}
 \begin{figure}[!h]
 \centering
 \input{zeiger.pdf_tex}
-\caption{Zeigerdiagramm, welches die Realteile der Spannung gegen ihren Imaginärteil in einer Serienschaltung aufträgt.}
+\caption{Zeigerdiagramm, welches die Realteile der Impedanz gegen ihren Imaginärteil in einer Serienschaltung aufträgt.}
 \label{fig:zeiger}
 \end{figure}
 Die Impedanz $Z$ berechnet sich nach \cite[S. 236]{nolting3} im Allgemeinen durch
@@ -272,7 +272,7 @@ Z_{||}=\frac{-i}{\frac{1}{X_L}+\frac{1}{X_C}}=\left( \frac{1}{R_L+i\omega L}+i\o
 \end{align}
 und dem Blindwiderstand
 \begin{align}
-|Z|=\left[\left(\omega C - \frac{\omega L}{R_L^2+(\omega L)^2}\right)^2+\left(\frac{R_L}{R_L^2+(\omega L)^2}\right)^2\right]^{-\frac{1}{2}}\label{eq:ZPara}\quad .
+|Z_{||}|=\left[\left(\omega C - \frac{\omega L}{R_L^2+(\omega L)^2}\right)^2+\left(\frac{R_L}{R_L^2+(\omega L)^2}\right)^2\right]^{-\frac{1}{2}}\label{eq:ZPara}\quad .
 \end{align}
 \section{Durchführung}
 \label{sec:durchfuehrung}
@@ -290,8 +290,8 @@ Zunächst baut man den Serienschaltkreis aus Abb. \ref{fig:serienschaltung} auf.
 Dabei wird der Kondensator zunächst überbrückt und erst nach 10 Messungen mit verschiedenen Frequenzen, bei denen Strom $I$ und Spannung $U$ protokolliert werden, hinzugeschaltet.
 Alle gemessenen Parameter sollen nun für möglichst viele verschiedene Frequenzen $f$ aufgezeichnet werden.
 Mit aktivem Kondensator müssen zusätzlich noch $U_C$ und $U_{R+L}$ sowie die Phasenverschiebung $\varphi$ notiert werden.
-Das Oszilloskop wird zur Bestimmung dieser einerseits zur Vermessung der Ausgangsspannung $U$ und andererseits zum Bestimmen des Stroms mit einer Stromzange verwendet.
-Bei der Nutzung der Stromzange ist darauf zu achten, dass sich in der Nähe keine anderen Magnetfelder oder stromdurchflossenen Kabel befinden, da dies die Messung stark verfälschen würde.
+Das Oszilloskop wird zur Bestimmung dieser einerseits zur Vermessung der Ausgangsspannung $U$ und andererseits zum Bestimmen des Stroms verwendet.
+Dies gelingt, indem man die Spannung über dem Ohmschen Widerstand abnimmt, da dies bis auf den Faktor $R_\omega$ identisch ist. 
 Es kann nun die beiden Kurven mit Hilfe des Mathe-Modus direkt auf deren Phasenverschiebung hin auswerten.
 Damit dies zuverlässig geschieht, ist darauf zu achten, dass die jeweiligen $y$-Achsen so gewählt sind, dass die Kurven ungefähr die selben Ausschläge zeigen.
 Auch muss mehr als eine Periode angezeigt werden.
@@ -326,7 +326,7 @@ Auch muss vor jeder Änderung am Aufbau sichergestellt werden, dass die Spannung
 \begin{figure}[!htb]
 	\centering
 	\input{messung1.tex}
-	\caption{Quadrat des Scheinwiderstands als Funktion der Kreisfrequenz.}
+	\caption{Quadrat des Scheinwiderstands als Funktion des Quadrates der Kreisfrequenz.}
 	\label{fig:messung1}
 \end{figure}
 Da zu Beginn der Kondensator überbrückt ist, ergibt sich aus der quadrierten Gleichung \eqref{eq:ZSerie} nur
@@ -337,7 +337,7 @@ Trägt man also $\omega^2$ gegen $Z^2$ auf, so ergibt sich eine Gerade $y=mx+b$ 
 Aus dem Fit der Abb. \ref{fig:messung1} ergibt sich so:
 \begin{align*}
 	L&=(386.3\pm 0.6)\,\si{\milli\henry}\quad \text{und}\\
-	R_\text{ges}&=(77.3 \pm 1.1)\,\si{\ohm}\quad .
+	R&=(77.3 \pm 1.1)\,\si{\ohm}\quad .
 \end{align*}
 \subsection{$RLC$-Serienschaltung}
 \begin{figure}[!htb]
@@ -394,8 +394,8 @@ Da um die Resonanzfrequenz $\omega_R$ der Arcustangens ungefähr linear ist, lä
 	\caption{Teilspannungen des Serienresonanzkreises.}
 	\label{fig:teilU}
 \end{figure}
-In Abb. \ref{fig:teilU} sind die Teilspannungen $U_C$ und $U_{L+R}$ in Abhängigkeit der Frequenz aufgetragen.
-Dabei fällt auf, dass beide ihr Maximum bei der Resonanzfrequenz haben.
+In Abb. \ref{fig:teilU} sind alle Spannungen in Abhängigkeit der Frequenz aufgetragen.
+Dabei fällt auf, dass die Teilspannungen $U_C$ und $U_{L+R}$ beide ihr Maximum bei der Resonanzfrequenz haben.
 Außerdem sind diese hier ungefähr gleich groß, wie schon in Kapitel \ref{sec:impedanz} erwähnt.
 In der Abbildung \ref{fig:zeigerU} sind die Spannungen $U_C$ und $U_{L+R}$ sowie die Gesamtspannung $U$ maßstabsgetreu eingezeichnet, welche sich bei der Messung der Resonanzfrequenz ergeben.
 Dazu werden die Messwerte bei einer gemessenen Phasenverschiebung von $1\si\degree$ verwendet: $U=9.26\,$V, $U_C=52.9\,$V und $U_{L+R}=53.4\,$V. 
@@ -454,15 +454,15 @@ $\overline C$		&	$(1.800 \pm 0.005)\,\si{\micro\farad}$\\\hline
 \subsection{Serienschaltung}
 In Abb. \ref{fig:messung3} ist zu erkennen, dass der 2. aufgezeichnete Wert deutlich von der Theoriekurve abweicht, obwohl die anderen relativ dicht an ihr liegen.
 Schon während der Messung stach dieser Wert aus den anderen heraus.
-Dies könnte daran liegen, dass das Oszilloskop statt $-107\si\degree\quad +107\si\degree$ angezeigt hat, was $-73\si\degree$ entspräche und gut in die Kurve passte.
+Dies könnte daran liegen, dass das Oszilloskop statt $(-107\si\degree)\quad (+107\si\degree)$ angezeigt hat, was $-73\si\degree$ entspräche und gut in die Kurve passte.
 Dies würde die großen Fehler im Fit dieser Daten erklären und die daraus resultierenden Ungenauigkeiten bei der Bestimmung der Kapazität $C$ und der Induktivität $L$.\\
 
 Die graphische Auswertung der Teilspannungen aus Abb. \ref{fig:zeigerU} liefert eine Phasenverschiebung von $\varphi=1.396\,$rad, was von dem theoretischen Wert von $\varphi=(1.399 \pm 0.001)\,\si{rad}$ um $3\permil$ abweicht.
 Der Wert liegt zwar nicht im Fehlerintervall, aber dies könnte auch an einer falschen graphischen Darstellung liegen.\\
 
 Die Messwerte außer der Resonanzfrequenz (siehe Abschnitt \ref{sec:resodisku}) zeigten zwar größere Streuungen um die Mittelwerte, aber ihre Fehlerintervalle überschneiden sich.
-Da der Gesammtwiderstand in einer Reihenschaltung sich addiert, müsste $R=R_l+R_\omega$ sein.
-Das aus den mit einem Multimeter gemessenen Widerständen $R_L+R_\omega=75.7\,\si\ohm$ statt der berechneten $R_{L+\omega}=80.3\,\si\ohm$ (eine Abweichung von 6\%) liegt daran, dass das Amperemeter noch in dem Stromkreis mit eingeschlossen war.
+Da der Gesammtwiderstand in einer Reihenschaltung sich addiert, müsste $R=R_L+R_\omega$ sein.
+Das die mit einem Multimeter gemessenen Widerständen $R_L+R_\omega=75.7\,\si\ohm$ statt der berechneten $R_{L+\omega}=80.3\,\si\ohm$ betragen (eine Abweichung von 6\%) liegt vermutlich daran, dass das Amperemeter noch in dem Stromkreis mit eingeschlossen war.
 
 
 \subsection{Resonanzfrequenz}
@@ -481,7 +481,7 @@ Dieser Wert liegt auch in dem sehr großen Fehlerintervall.
 Die Fehler der Widerstandsmessungen wurden mit $0.1\si\ohm$ abgeschätzt, da das Messgerät diese Genauigkeit bereitstellte.
 Die Frequenzmessungen wurden als präzise eingestuft, da hier die kleinsten Fehler zu erwarten waren und somit die anderen Messungen im Verhältnis deutlich unpräziser sind.
 Bei den Spannungsmessungen wurden Fehlerintervalle von $0.01\,\si\volt$ angenommen, was die Genauigkeit der Messgeräte von $(0.25\%+1\,\text{Digit})$ nach oben abschätzt.
-Ebenso wurde die Strommessung mit $\sigma_I=2\%$ abgeschätzt, was höher als die eigentliche Genauigkeit von $(1\%+1\,\text{Digit})$ ist.
+Ebenso wurde die Strommessung mit $\sigma_I=2\%$ abgeschätzt, was höher als die eigentliche Ungenauigkeit von $(1\%+1\,\text{Digit})$ ist.
 
 
 \bibliography{literatur}
